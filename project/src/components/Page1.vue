@@ -1,7 +1,7 @@
 <template>
 
 <section class='test'>
-<p> lorem ipsum dolor sit amet, consectetur adipiscing elit et just aliquet et just al 
+<p> lorem ipsum dolor sit amet, consectetur <span>aez,kaz,eaz</span>adipiscing elit et just aliquet et just al 
 </p>
 <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/langfr-220px-Vue.js_Logo_2.svg.png'>
 </section>
@@ -17,5 +17,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
+p{
+    color:red;
+    span{
+        color:green;
+    }
+}
+
 </style>
