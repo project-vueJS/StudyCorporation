@@ -1,5 +1,5 @@
 <template>
-    <div class="book info">
+    <div>
         <div class="border"></div>
         <p>4</p>
         <div class="content">
@@ -30,30 +30,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
-@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-#app {
-    font-family: 'Calligraffitti', cursive;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    height: 100vh;
-    display: grid;
-    place-items: center;
-
-    .book{
-        width: 30%;
-        height: 80%;
-        position: relative;
-        padding: 30px;
-        box-shadow: 0 4px 8px rgba($color: #000000, $alpha: 0.2);
 
         p{
             position: absolute;
@@ -130,8 +108,6 @@ export default {
                 }
             }
         }
-    }
-}
 
     .none {
         display: none;

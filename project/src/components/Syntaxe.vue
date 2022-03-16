@@ -104,12 +104,8 @@
     };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
     section {
-
-        width : 35%;
-        border : black solid 1px;
-        box-shadow : 2px 2px 8px grey;
         margin : 0 auto;
 
         font-size: 8px;
