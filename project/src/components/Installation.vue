@@ -109,6 +109,18 @@ export default {
                 font-size: 24px;
                 font-weight: 600;
 
+                span {
+                    color: #3a699b;
+
+                    a {
+                        color: #3a699b;
+                    }
+
+                    a:hover {
+                        color: darken($color: #3a699b, $amount: 20);
+                    }
+                }
+
                 ul {
                     margin-left: 25px;
                 }
