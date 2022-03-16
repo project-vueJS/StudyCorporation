@@ -1,0 +1,125 @@
+<template>
+    <div class="book info">
+        <div class="border"></div>
+        <p>3</p>
+        <div class="content">
+            <ul>
+                <li>Vue.js est un framework front-end JavaScript conçu pour les interfaces utilisateur et les applications / sites web à page unique.</li>
+                <li>Auteur : <span>Evan You</span></li>
+                <li>Date de release : <span>Février 2014</span></li>
+                <li>Site web officiel : <span><a href="http://vuejs.org" target="blank">vuejs.org</a></span></li>
+            </ul>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'Histoire_',
+}
+</script>
+
+<style lang="scss">
+
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    font-family: 'Calligraffitti', cursive;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+    .book{
+        width: 30%;
+        height: 80%;
+        position: relative;
+        padding: 30px;
+        box-shadow: 0 4px 8px rgba($color: #000000, $alpha: 0.2);
+
+        p{
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            color: #3fb984;
+        }
+
+        .border{
+            position: absolute;
+            left: 0;
+            z-index: 10;
+            top: 0;
+            height: 100%;
+            background-color: #31475e;
+            width: 3%;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 40px;
+            color:  #31475e;
+            position: relative;
+            width: auto;
+
+            &:after{
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                bottom: 5px;
+                width: 20%;
+                background-color: #3fb984;
+                height: 3px;
+                border-radius: 25px;
+            }
+        }
+
+        .content{
+            margin-left: 40px;
+            height: 80%;
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+            }
+
+            li{
+                color: #31475e;
+                margin: 25px 0 0;
+                font-size: 24px;
+                font-weight: 600;
+
+            span {
+                    color: #3a699b;
+
+                    a {
+                        color: #3a699b;
+                    }
+
+                    a:hover {
+                        color: darken($color: #3a699b, $amount: 20);
+                    }
+                }
+
+            &::marker{
+                color: #3fb984;
+                }
+            }
+        }
+    }
+}
+
+    .none {
+        display: none;
+    }
+
+</style>

@@ -1,10 +1,22 @@
 <script setup>
-import Page1 from './components/Page1.vue';
+import PageAccueil from "./components/PageAccueil.vue"
+import Page5 from './components/Page5.vue';
+import Histoire from './components/Histoire.vue'
+import Installation from './components/Installation.vue'
+import Syntaxe from './components/Syntaxe.vue'
+import Sommaire from './components/Sommaire.vue'
+
 </script>
 
 
 <template>
-  <Page1></Page1>
+
+  <PageAccueil></PageAccueil>
+  <Sommaire></Sommaire>
+  <Histoire></Histoire>
+  <Installation></Installation>
+  <Syntaxe></Syntaxe>
+  <Page5></Page5>
 </template>
 
 <style></style>
