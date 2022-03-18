@@ -25,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 
-@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+
 
     p{
       position: absolute;

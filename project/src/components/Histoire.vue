@@ -2,6 +2,7 @@
     <div>
         <div class="border"></div>
         <p>3</p>
+        <h1>Histoire</h1>
         <div class="content">
             <ul>
                 <li>Vue.js est un framework front-end JavaScript conçu pour les interfaces utilisateur et les applications / sites web à page unique.</li>

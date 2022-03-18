@@ -52,7 +52,7 @@
 .title {
   margin-top: 100px;
   position: relative;
-  left: 180px;
+  left: 33%;
   color: white;
   font-family: 'Calligraffitti', cursive;
   font-size: 40px;
