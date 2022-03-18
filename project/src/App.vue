@@ -1,4 +1,4 @@
-<template>
+<template >
   <i class="fa-solid fa-chevron-left arrow arrow_left" @click="decrement"></i>
   <div class="book">
     <Page1 v-if="count === 1"></Page1>
@@ -7,9 +7,10 @@
     <Page4 v-else-if="count === 4"></Page4>
     <Page5 v-else-if="count === 5"></Page5>
     <Page6 v-else-if="count === 6"></Page6>
+    <Page7 v-else-if="count === 7"></Page7>
   </div>
   <i class="fa-solid fa-chevron-right arrow arrow_right" @click="increment"></i>
-  <input type="number" v-model="count" name="count" id="" min="1" max="6">
+  <input type="number" v-model="count" name="count" id="" min="1" max="6" class="selectPage">
 </template>
 
 <script>
@@ -19,6 +20,7 @@ import Histoire from './components/Histoire.vue'
 import Installation from './components/Installation.vue'
 import Syntaxe from './components/Syntaxe.vue'
 import Sommaire from './components/Sommaire.vue'
+import Exemples from './components/Page7.vue'
 
 export default {
   name: 'App',
@@ -28,7 +30,8 @@ export default {
     'Page3': Histoire,
     'Page4': Installation,
     'Page5': Page5,
-    'Page6': Syntaxe
+    'Page6': Syntaxe,
+    'Page7': Exemples
   },
   data () {
     return {
@@ -37,7 +40,7 @@ export default {
   },
   methods:{
     increment() {
-      this.count = this.count === 6 ? 6 : this.count + 1;
+      this.count = this.count === 7 ? 7 : this.count + 1;
     },
     decrement() {
       this.count = this.count === 1 ? 1 : this.count - 1;
@@ -86,7 +89,7 @@ export default {
   box-shadow: 0 4px 8px rgba($color: #000000, $alpha: 0.2);
 }
 
-input{
+.selectPage{
   position: absolute;
   left: 50%;
   bottom: 10px;
