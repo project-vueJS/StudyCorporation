@@ -1,4 +1,5 @@
 <template>
+  <i class="fa-solid fa-chevron-left arrow arrow_left" @click="decrement"></i>
   <div class="book">
     <Page1 v-if="count === 1"></Page1>
     <Page2 v-else-if="count === 2"></Page2>
@@ -7,6 +8,7 @@
     <Page5 v-else-if="count === 5"></Page5>
     <Page6 v-else-if="count === 6"></Page6>
   </div>
+  <i class="fa-solid fa-chevron-right arrow arrow_right" @click="increment"></i>
   <input type="number" v-model="count" name="count" id="" min="1" max="6">
 </template>
 
@@ -33,6 +35,14 @@ export default {
       count: 1
     }
   },
+  methods:{
+    increment() {
+      this.count = this.count === 6 ? 6 : this.count + 1;
+    },
+    decrement() {
+      this.count = this.count === 1 ? 1 : this.count - 1;
+    }
+  }
 }
 
 </script>
@@ -50,8 +60,22 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
-  display: grid;
-  place-items: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow{
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.arrow_left{
+  margin-left: 50px;
+}
+
+.arrow_right{
+  margin-right: 50px;
 }
 
 .book{
@@ -64,7 +88,10 @@ export default {
 
 input{
   position: absolute;
-  bottom: 20px;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%, -50%);
+  padding: 5px 10px;
 }
 
 </style>
